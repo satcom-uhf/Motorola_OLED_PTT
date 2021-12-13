@@ -1,18 +1,15 @@
-#define ASCII_conv 0
-#include "OLED_I2C.h"           // подключаем библиотеку для экрана
+#include "OLED_I2C.h"           
 #include <SoftwareSerial.h>
  
 SoftwareSerial mySerial(2, 3);
-OLED myOLED(SDA, SCL, 8);  // создаем объект myOLED
+OLED myOLED(SDA, SCL, 8);  
 
 String LCD_buf = "";
 String Text = "";
 String DisplayUpdatePrefix="ff340";
 String CloseSquelchPrefix="f5353ff";
 String OpenSquelchPrefix="f53503f";
-bool waitForFrameCompleted = false;
-int readedFrameLen = 0;
-// подключаем шрифты для текста и цифр
+
 extern uint8_t TinyFont[];
 extern uint8_t SmallFont[];
 extern uint8_t MediumNumbers[];
@@ -43,20 +40,16 @@ void loop(){
         }
         myOLED.update();
         Serial.println(LCD_buf+"_"+Text);
-        LCD_buf=""; // очищаем стоку LCD_buf для последующей перезаписи нового пакета     
-       Text="";
+        LCD_buf=""; 
+        Text="";
     } 
     else{
       LCD_buf += String(RIB_buf, HEX);
       char c=char(RIB_buf);
       if (isPrintable(c)&&!(Text=="" && c=='4')){
-        Text+=c; 
-        
+        Text+=c;         
       }
     }
-      
-   
-   
   }
   delay(100);
 }
