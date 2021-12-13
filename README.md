@@ -11,9 +11,9 @@ OLED display for Motorola GM
 ## Connect Arduino to Motorola RJ45
 ![изображение](https://user-images.githubusercontent.com/90838159/145759883-675e5617-ba00-4afe-91cb-e947501624d3.png)
 
-GND (pin 4) -> Arduino GND
-+5V (pin 2) -> Arduino VIN
-BUS (pin 7) -> Arduino D2
+- GND (pin 4) -> Arduino GND
+- +5V (pin 2) -> Arduino VIN
+- BUS (pin 7) -> Arduino D2
 
 ## Upload sketch
 
