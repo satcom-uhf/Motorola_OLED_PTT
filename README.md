@@ -21,3 +21,4 @@ OLED display for Motorola GM
 
 ![изображение](https://user-images.githubusercontent.com/90838159/145760664-bc75f643-f23b-47a3-9015-0813f3982172.png)
 
+Thanks Nikolay RA6LFJ for [version for European GM360](https://github.com/satcom-uhf/Motorola_OLED_PTT/blob/main/GM_360_EU.ino)
